@@ -1,0 +1,73 @@
+GET http://127.0.0.1:3000
+
+###
+GET http://127.0.0.1:3000/json
+
+### sign-up
+POST http://127.0.0.1:3000/auth/sign-up
+Content-Type: application/json
+
+{
+  "email": "dev+1@empire-reports.com",
+  "name": "Dev Emmanuel 2",
+  "age": 18,
+  "field": "Web Dev",
+  "password": "12345678"
+}
+
+
+### sign-in
+POST http://127.0.0.1:3000/auth/sign-in
+Content-Type: application/json
+
+{
+  "email": "dev+1@empire-reports.com",
+  "password": "12345678"
+}
+
+
+### forgot password
+POST http://127.0.0.1:3000/auth/forgot-password
+Content-Type: application/json
+
+{
+  "email": "dev@empire-reports.com"
+}
+
+
+### reset password
+POST http://127.0.0.1:3000/auth/reset-password
+Content-Type: application/json
+
+{
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJkZXYrMUBlbXBpcmUtcmVwb3J0cy5jb20iLCJpYXQiOjE3NzQ2MTA3OTgsImV4cCI6MTc3NDYxMTY5OH0.UK6_25FJW7ScN4qT2QHoWbSa5TJFtSlkVLWfPq0rwug",
+  "password": "newPassword"
+}
+
+
+### Get profile
+GET http://127.0.0.1:3000/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJkZXZAZW1waXJlLXJlcG9ydHMuY29tIiwiaWF0IjoxNzc0ODY4MTMzLCJleHAiOjE3NzU0NzI5MzN9.V4yKXj1aO9pcOt-bG4v5l9-jIyewbeXu-sBmZo64MdY
+
+
+### Update profile
+PUT http://127.0.0.1:3000/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJkZXZAZW1waXJlLXJlcG9ydHMuY29tIiwiaWF0IjoxNzc0ODY4MTMzLCJleHAiOjE3NzU0NzI5MzN9.V4yKXj1aO9pcOt-bG4v5l9-jIyewbeXu-sBmZo64MdY
+Content-Type: application/json
+
+{
+  "name": "Empire Reports",
+  "age": 20,
+  "field": "Backend"
+}
+
+
+### Change password
+PATCH http://127.0.0.1:3000/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJkZXZAZW1waXJlLXJlcG9ydHMuY29tIiwiaWF0IjoxNzc0ODY4MTMzLCJleHAiOjE3NzU0NzI5MzN9.V4yKXj1aO9pcOt-bG4v5l9-jIyewbeXu-sBmZo64MdY
+Content-Type: application/json
+
+{
+  "oldPassword": "12345678",
+  "newPassword": "1234567890"
+}
