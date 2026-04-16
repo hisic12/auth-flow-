@@ -41,7 +41,7 @@ const sendResetPassword = async (email, token) => {
     </p>
 
     <div style="margin: 20px 0; padding: 10px; background: #f0f0f0; border-radius: 5px; font-weight: bold; color: #333; width: 100%;">
-     <a href="http://127.0.0.1:5500/frontend/reset-password.html?token={{token}}">Click to reset password</a>
+     <a href="https://auth-flow-a-frontend-eojg.onrender.com/frontend/reset-password.html?token={{token}}">Click to reset password</a>
     </div>
 
     <p style="color: #888; font-size: 12px;">
